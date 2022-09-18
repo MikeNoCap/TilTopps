@@ -950,7 +950,6 @@ int main(int argc, char *argv[])
     operations(numbers1Vector, svar);
   }
 
-  int answersGot = 0;
   for (int i = 0; i < 100; i++)
   {
     cout << svar[i] << "\n";

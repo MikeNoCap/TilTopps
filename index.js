@@ -14,8 +14,8 @@ app.get("/", (req, res) => {
 
 app.post("/calc", (req, res) => {
     console.log(req.body)
-    exec(`.\\main.exe ${req.body.n1} ${req.body.n2} ${req.body.n3} ${req.body.n4} ${req.body.n5}`, (error, stdout, stderr) => {
-        res.json({svar: stdout.split("\r\n").slice(0, 100)})
+    exec(`./main ${req.body.n1} ${req.body.n2} ${req.body.n3} ${req.body.n4} ${req.body.n5}`, (error, stdout, stderr) => {
+        res.json({svar: stdout.split("\n").slice(0, 100)})
     });
 })
 

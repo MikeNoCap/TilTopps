@@ -17,6 +17,7 @@ async function submit() {
     });
     const resJson = await response.json();
     const answers = resJson.svar;
+    console.log(answers);
     const answerGrid = document.getElementById("answers");
     for(let i = 0; i<answers.length; i++) {
         const answer = document.createElement("div")
